@@ -1,0 +1,14 @@
+sources:
+  - name: stripe
+    database: raw
+    schema: stripe
+    tables:
+      - name: payment
+        columns:
+          - name: id
+            description: primary key
+            data_tests:
+              - unique
+              - not_null
+          - name: orderid
+            description: foreign key to orders table
